@@ -3,7 +3,7 @@
 import random
 #I import math because i atualy needd need it 
 import math
-import turtle
+
 #yay now i have a nuber :)
 andrews_personal_number = random.randint(1, 1000000000000000000000000000000000)
 
@@ -30,38 +30,52 @@ distance = math.sqrt( disX + disY )
 
 
 if distance < radis1:
-    print("one is in two")
+    msg1 = str(name2) + " is in " + str(name1)
 elif distance < radis2:
-    print("two is in one")
+    msg1 = str(name1) + " is in " + str(name2)
 elif distance < radis1 and radis2:
-    print("they are in each other")
+    msg1 = "they are in each other"
 else:
-    print("they are not in the space")
+    msg1 = "they are not in the space"
 
 if distance > radis1 + radis2:
-    print("the spaces do not overlap")
+    msg2 = "the spaces do not overlap"
+elif distance < radis1 + radis2:
+    msg2 = "they overlap"
 elif distance + radis1 < radis2:
-    print("red is in green")
+    msg2 ="green is in red"
 elif distance + radis2 < radis1:
-    print("green is in red")    
+    msg2 = "red is in green"    
 
 print(distance)
+print(str(msg1) + "\n" + str(msg2))
 
-turtle.speed(1)
-turtle.penup()
-turtle.goto(onex, oney)
-turtle.pendown()
-turtle.fillcolor("red")
-turtle.begin_fill()
-turtle.circle(radis1)
-turtle.end_fill()
-turtle.penup()
-turtle.goto(twox, twoy)
-turtle.pendown()
-turtle.fillcolor("green")
-turtle.begin_fill()
-turtle.circle(radis2)
-turtle.end_fill()
-turtle.penup()
-turtle.goto(1000, 1000)
-input()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#just in case
+import turtle
